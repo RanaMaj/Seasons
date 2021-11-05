@@ -6,7 +6,7 @@
 <!-- ABOUT THE PROJECT -->
 
 ## About The Project
-
+### fully Responsive
 ***What I use :thinking: :*** 
 - HTML 
 - CSS
