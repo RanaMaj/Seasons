@@ -1,0 +1,243 @@
+:root{
+    --main:#ddd;
+    --lightdark:#333;
+    --light:#fff;
+    --darkness:rgb(34, 34, 34);
+    --shadow:0 1px 5px rgba(230, 123, 35, 0.685);
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+body{
+    background:url(../img/pexels-tomas-anunziata-695207.jpg);
+    margin: 30px 50px;
+    line-height: 2;
+}
+.btn{
+    background: #c2693c;
+    color: #412f1d;
+    padding: 0.6rem 1.3rem; 
+    text-decoration: none;
+    border: 0;
+}
+span{
+    width: 20px;
+    height: 20px;
+}
+img{
+    max-width: 100%;
+}
+#wrapper{
+    display: grid;
+    grid-gap: 20px;
+}
+.top-nav .main-nav{
+    display: grid;
+    grid-gap: 20px;
+    list-style: none;
+    grid-template-columns: repeat(5, 1fr);
+}
+.main-nav a{
+    background: #ccbaa7be;
+    color: var(--light);
+    display: block;
+    text-decoration: none;
+    padding: 0.8rem;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 1.1rem;
+    box-shadow: var(--shadow);
+}
+.main-nav a:hover{
+    background:var(--light) ;
+    color: #ccbaa7be;
+}
+.top-container{
+    display: grid;
+    grid-gap: 20px;
+    /*grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4,1fr);*/
+    grid-template-areas: 
+    "box-one firstaside firstaside"
+    "box-two firstaside firstaside"
+    "box-three firstaside firstaside"
+    "box-four firstaside firstaside"
+    ;
+}
+.firstaside{
+    grid-area: firstaside;
+    min-height: 400px;
+    background: url(../img/pexels-cottonbro-3154305.jpg) no-repeat center center;
+    background-size: cover;
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    box-shadow: var(--shadow);
+}
+.firstaside h1{
+    font-size: 4rem;
+    margin-bottom: 0;
+    color: #412f1dbe;
+    text-transform: uppercase;
+}
+.firstaside p{
+    font-size: 1.3rem;
+    margin-top: 0;
+    color: #412f1d;
+    font-weight: bold;
+    text-shadow: 0 7px 7px #c2693c75;
+}
+.top-box{
+    background:var(--main);
+    grid-area: top-box;
+    align-items: center;
+    justify-content: center;
+    box-shadow: var(--shadow);
+    padding: 1.5rem;
+}
+.top-box .price{
+    font-size: 2.5rem;
+}
+.box-one{
+    grid-area: box-one;
+    background: url(../img/pexels-ian-beckley-2440024.jpg) center center;
+    background-size: cover;
+}
+.box-two{
+    grid-area: box-two;
+    background: url(../img/pexels-simon-berger-953241.jpg) center center;
+    background-size: cover;
+}
+.box-three{
+    grid-area: box-three;
+    background: url(../img/pexels-guillaume-hankenne-2792078.jpg) center center;
+    background-size: cover;
+}
+.box-four{
+    grid-area: box-four;
+    background: url(../img/pexels-hissetmehurriyeti-8416549\ \(1\).jpg) center center;
+    background-size: cover;
+}
+.boxes{
+    display:grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+}
+.box{
+    background: var(--main);
+    text-align: center;
+    padding: 1.5rem 2rem;
+    box-shadow: var(--shadow);
+}
+.info{
+    background: rgba(221, 221, 221, 0.637);
+    box-shadow: var(--shadow);
+    display: grid;
+    grid-template-columns:  repeat(2, 1fr);
+    padding: 3rem;
+}
+h2{
+    margin-left: 10px;
+}
+p{
+    margin-left: 8px;
+}
+div{
+    text-align: center;
+}
+.btn{
+    background: var(--darkness);
+    color: var(--light);
+    margin-left: 20px;
+}
+.btn:hover{
+    background: rgba(204, 72, 24, 0.89) ;
+    color: #ccbaa7be;
+    margin-left: 20px;
+}
+.portfolio{
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+.portfolio img{
+    width: 100%;
+    box-shadow: var(--shadow);
+}
+footer{
+    margin-top: 1.2rem;
+    background: var(--lightdark);
+    color: white;
+    text-align: center;
+    padding: 0.5rem;
+}
+@media (min-width: 768px) and (max-width: 991.98px) { 
+    .top-container{
+        grid-template-areas: 
+        "firstaside firstaside firstaside firstaside"
+        "box-one box-one box-two box-two"
+        "box-three box-three box-four box-four"
+        ;
+    }
+    .boxes{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .portfolio{
+        grid-template-columns: repeat(2, minmax(200px, 1fr));
+    }
+    .info{
+        grid-template-columns:  repeat(1, 1fr);
+    }
+    .top-nav .main-nav{
+        grid-template-columns: repeat(1, 1fr);
+    }
+ }
+ @media (min-width: 992px) and (max-width: 1199.98px) { 
+    .top-container{
+        grid-template-areas: 
+        "firstaside firstaside firstaside firstaside"
+        "box-one box-one box-two box-two"
+        "box-three box-three box-four box-four"
+        ;
+    }
+    .boxes{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .portfolio{
+        grid-template-columns: repeat(2, minmax(200px, 1fr));
+    }
+    .info{
+        grid-template-columns:  repeat(1, 1fr);
+    }
+    .top-nav .main-nav{
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+ @media (min-width: 576px) and (max-width: 767.98px) { 
+    .top-container{
+        grid-template-areas: 
+        "firstaside firstaside"
+        "box-one box-one"
+        "box-two box-two"
+        "box-three box-three"
+        "box-four box-four"
+        ;
+    }
+    .boxes{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .portfolio{
+        grid-template-columns: repeat(1, minmax(200px, 1fr));
+    }
+    .info{
+        grid-template-columns:  repeat(1, 1fr);
+    }
+    .top-nav .main-nav{
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
